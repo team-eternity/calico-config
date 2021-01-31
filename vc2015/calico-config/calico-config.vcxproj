@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2E29AA3D-59DE-4636-B4C9-1CFBBAA21F88}</ProjectGuid>
+    <RootNamespace>calicoconfig</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../src/textscreen;../../src/choco;../../src/setup;$(SDL2)\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SDL2)\lib\x86\SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../src/textscreen;../../src/choco;../../src/setup;$(SDL2)\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SDL2)\lib\x64\SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../src/textscreen;../../src/choco;../../src/setup;$(SDL2)\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SDL2)\lib\x86\SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../src/textscreen;../../src/choco;../../src/setup;$(SDL2)\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SDL2)\lib\x64\SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\calico\configvars.h" />
+    <ClInclude Include="..\..\src\calico\j_eeprom.h" />
+    <ClInclude Include="..\..\src\choco\doomkeys.h" />
+    <ClInclude Include="..\..\src\choco\m_misc.h" />
+    <ClInclude Include="..\..\src\elib\atexit.h" />
+    <ClInclude Include="..\..\src\elib\bdlist.h" />
+    <ClInclude Include="..\..\src\elib\binary.h" />
+    <ClInclude Include="..\..\src\elib\compare.h" />
+    <ClInclude Include="..\..\src\elib\configfile.h" />
+    <ClInclude Include="..\..\src\elib\dllist.h" />
+    <ClInclude Include="..\..\src\elib\elib.h" />
+    <ClInclude Include="..\..\src\elib\esmartptr.h" />
+    <ClInclude Include="..\..\src\elib\misc.h" />
+    <ClInclude Include="..\..\src\elib\m_argv.h" />
+    <ClInclude Include="..\..\src\elib\m_ctype.h" />
+    <ClInclude Include="..\..\src\elib\parser.h" />
+    <ClInclude Include="..\..\src\elib\qstring.h" />
+    <ClInclude Include="..\..\src\elib\swap.h" />
+    <ClInclude Include="..\..\src\elib\zone.h" />
+    <ClInclude Include="..\..\src\hal\hal_init.h" />
+    <ClInclude Include="..\..\src\hal\hal_input.h" />
+    <ClInclude Include="..\..\src\hal\hal_ml.h" />
+    <ClInclude Include="..\..\src\hal\hal_platform.h" />
+    <ClInclude Include="..\..\src\hal\hal_sfx.h" />
+    <ClInclude Include="..\..\src\hal\hal_timer.h" />
+    <ClInclude Include="..\..\src\hal\hal_types.h" />
+    <ClInclude Include="..\..\src\hal\hal_video.h" />
+    <ClInclude Include="..\..\src\sdl\sdl_hal.h" />
+    <ClInclude Include="..\..\src\sdl\sdl_init.h" />
+    <ClInclude Include="..\..\src\setup\compatibility.h" />
+    <ClInclude Include="..\..\src\setup\display.h" />
+    <ClInclude Include="..\..\src\setup\execute.h" />
+    <ClInclude Include="..\..\src\setup\joystick.h" />
+    <ClInclude Include="..\..\src\setup\keyboard.h" />
+    <ClInclude Include="..\..\src\setup\mode.h" />
+    <ClInclude Include="..\..\src\setup\mouse.h" />
+    <ClInclude Include="..\..\src\setup\multiplayer.h" />
+    <ClInclude Include="..\..\src\setup\sound.h" />
+    <ClInclude Include="..\..\src\setup\txt_joyaxis.h" />
+    <ClInclude Include="..\..\src\setup\txt_joybinput.h" />
+    <ClInclude Include="..\..\src\setup\txt_keyinput.h" />
+    <ClInclude Include="..\..\src\setup\txt_mouseinput.h" />
+    <ClInclude Include="..\..\src\textscreen\fonts\codepage.h" />
+    <ClInclude Include="..\..\src\textscreen\fonts\large.h" />
+    <ClInclude Include="..\..\src\textscreen\fonts\normal.h" />
+    <ClInclude Include="..\..\src\textscreen\fonts\small.h" />
+    <ClInclude Include="..\..\src\textscreen\textscreen.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_button.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_checkbox.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_conditional.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_desktop.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_dropdown.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_fileselect.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_gui.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_inputbox.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_io.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_label.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_main.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_radiobutton.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_scrollpane.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_sdl.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_separator.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_spinctrl.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_strut.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_table.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_utf8.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_widget.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_window.h" />
+    <ClInclude Include="..\..\src\textscreen\txt_window_action.h" />
+    <ClInclude Include="..\..\src\win32\win32_platform.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\calico\configvars.cpp" />
+    <ClCompile Include="..\..\src\calico\j_eeprom.c" />
+    <ClCompile Include="..\..\src\choco\m_misc.c" />
+    <ClCompile Include="..\..\src\elib\atexit.cpp" />
+    <ClCompile Include="..\..\src\elib\configfile.cpp" />
+    <ClCompile Include="..\..\src\elib\misc.cpp" />
+    <ClCompile Include="..\..\src\elib\m_argv.c" />
+    <ClCompile Include="..\..\src\elib\parser.cpp" />
+    <ClCompile Include="..\..\src\elib\qstring.cpp" />
+    <ClCompile Include="..\..\src\elib\zone.cpp" />
+    <ClCompile Include="..\..\src\hal\hal_init.c" />
+    <ClCompile Include="..\..\src\hal\hal_input.c" />
+    <ClCompile Include="..\..\src\hal\hal_ml.c" />
+    <ClCompile Include="..\..\src\hal\hal_platform.c" />
+    <ClCompile Include="..\..\src\hal\hal_sfx.c" />
+    <ClCompile Include="..\..\src\hal\hal_timer.c" />
+    <ClCompile Include="..\..\src\hal\hal_video.c" />
+    <ClCompile Include="..\..\src\sdl\sdl_hal.c" />
+    <ClCompile Include="..\..\src\sdl\sdl_init.c" />
+    <ClCompile Include="..\..\src\setup\compatibility.c" />
+    <ClCompile Include="..\..\src\setup\display.c" />
+    <ClCompile Include="..\..\src\setup\execute.cpp" />
+    <ClCompile Include="..\..\src\setup\joystick.c" />
+    <ClCompile Include="..\..\src\setup\keyboard.c" />
+    <ClCompile Include="..\..\src\setup\mainmenu.c" />
+    <ClCompile Include="..\..\src\setup\mode.c" />
+    <ClCompile Include="..\..\src\setup\mouse.c" />
+    <ClCompile Include="..\..\src\setup\multiplayer.c" />
+    <ClCompile Include="..\..\src\setup\setup_icon.c" />
+    <ClCompile Include="..\..\src\setup\sound.c" />
+    <ClCompile Include="..\..\src\setup\txt_joyaxis.c" />
+    <ClCompile Include="..\..\src\setup\txt_joybinput.c" />
+    <ClCompile Include="..\..\src\setup\txt_keyinput.c" />
+    <ClCompile Include="..\..\src\setup\txt_mouseinput.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_button.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_checkbox.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_conditional.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_desktop.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_dropdown.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_fileselect.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_gui.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_inputbox.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_io.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_label.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_radiobutton.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_scrollpane.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_sdl.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_separator.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_spinctrl.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_strut.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_table.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_utf8.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_widget.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_window.c" />
+    <ClCompile Include="..\..\src\textscreen\txt_window_action.c" />
+    <ClCompile Include="..\..\src\win32\win32_main.c" />
+    <ClCompile Include="..\..\src\win32\win32_platform.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
