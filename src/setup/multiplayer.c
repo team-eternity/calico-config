@@ -151,7 +151,7 @@ static void AddIWADParameter(execute_context_t *exec)
 {
     if (iwadfile != NULL)
     {
-        AddCmdLineParameter(exec, "-iwad %s", iwadfile);
+        AddCmdLineParameter(exec, "-iwad \"%s\"", iwadfile);
     }
 }
 

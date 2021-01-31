@@ -189,9 +189,8 @@ static std::wstring BuildCommandLine(const char *program, execute_context_t *con
  
     for(const qstring &arg : context->args)
     {
-        result += L" \"";
+        result += L" ";
         ConcatWCString(result, arg.constPtr());
-        result += L"\"";
     }
     
     return result;
