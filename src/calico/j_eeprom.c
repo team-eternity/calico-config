@@ -34,12 +34,12 @@
 
 static FILE *eepromFile;
 
-int startskill;
-int startmap;
-int sfxvolume;
-int musicvolume;
-int controltype;
-int maxlevel;
+int startskill  = sk_medium;
+int startmap    = 1;
+int sfxvolume   = 200;
+int musicvolume = 128;
+int controltype = 0;
+int maxlevel    = 1;
 
 #define IDWORD (('D'<<8)+'1')
 #define EEWORDS 8 // MUST BE EVEN!!!!!!
@@ -150,25 +150,26 @@ void ReadEEProm(void)
    if(checksum != eeprombuffer[EEWORDS-1])
    {
       ClearEEProm();
+      return;
    }
 
    startskill = eeprombuffer[1];
-   if(startskill > sk_nightmare)
+   if(startskill < sk_baby || startskill > sk_nightmare)
       startskill = sk_medium;
    startmap = eeprombuffer[2];
-   if(startmap > 26)
+   if(startmap < 1 || startmap > 26)
       startmap = 1;
    sfxvolume = eeprombuffer[3];
-   if(sfxvolume > 255)
+   if(sfxvolume < 0 || sfxvolume > 255)
       sfxvolume = 200;
    musicvolume = eeprombuffer[4];
-   if(musicvolume > 255)
+   if(musicvolume < 0 || musicvolume > 255)
       musicvolume = 128;
    controltype = eeprombuffer[5];
-   if(controltype > 5)
+   if(controltype < 0 || controltype > 5)
       controltype = 0;
    maxlevel = eeprombuffer[6];
-   if(maxlevel > 25)
+   if(maxlevel < 1 || maxlevel > 25)
       maxlevel = 1;
 }
 
